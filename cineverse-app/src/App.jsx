@@ -1,3 +1,4 @@
+import Seats from "./pages/Seats";
 import Booking from "./pages/Booking";
 import Movies from "./pages/Movies";
 import Dashboard from "./pages/Dashboard";
@@ -10,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/seats" element={<Seats />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/dashboard" element={<Dashboard />} />
