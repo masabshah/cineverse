@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Booking() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <h1>🎟️ Book Your Ticket</h1>
@@ -8,18 +12,23 @@ export default function Booking() {
       <p>Select Date:</p>
       <input type="date" />
 
-      <br /><br />
+      <br />
+      <br />
 
       <p>Select Time:</p>
+
       <select>
         <option>10:00 AM</option>
         <option>2:00 PM</option>
         <option>6:00 PM</option>
       </select>
 
-      <br /><br />
+      <br />
+      <br />
 
-      <button>Proceed to Seats</button>
+      <button onClick={() => navigate("/seats")}>
+        Proceed to Seats
+      </button>
     </div>
   );
 }

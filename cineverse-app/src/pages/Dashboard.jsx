@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <h1>🎬 Cineverse Dashboard</h1>
@@ -7,18 +11,21 @@ export default function Dashboard() {
 
       <div>
         <h3>Avengers: Endgame</h3>
-        <button>Book Now</button>
       </div>
 
       <div>
         <h3>Interstellar</h3>
-        <button>Book Now</button>
       </div>
 
       <div>
         <h3>Inception</h3>
-        <button>Book Now</button>
       </div>
+
+      <br />
+
+      <button onClick={() => navigate("/movies")}>
+        View Movies
+      </button>
     </div>
   );
 }
