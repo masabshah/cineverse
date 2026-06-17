@@ -1,0 +1,383 @@
+/* ===================== */
+/* GLOBAL */
+/* ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ===================== */
+/* LOGIN PAGE */
+/* ===================== */
+
+.login-page {
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.75)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.login-overlay {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 420px;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  text-align: center;
+}
+
+.login-card h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.login-card input {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-bottom: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.1);
+
+  color: white;
+}
+
+.login-card button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #e11d48;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  transform: translateY(-3px);
+}
+
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link span {
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* DASHBOARD */
+/* ===================== */
+
+.dashboard {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px 60px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  background: rgba(2,6,23,0.85);
+
+  backdrop-filter: blur(15px);
+}
+
+.navbar h2 {
+  color: #e11d48;
+
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+
+  gap: 30px;
+}
+
+.nav-links span {
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: #e11d48;
+}
+
+/* HERO */
+
+.netflix-hero {
+  height: 100vh;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(2,6,23,0.95) 25%,
+      rgba(2,6,23,0.5) 60%,
+      rgba(2,6,23,0.85)
+    ),
+    url("https://wallpapercave.com/wp/wp1945908.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 650px;
+
+  margin-left: 80px;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  background: rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(10px);
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  margin-bottom: 25px;
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+
+  margin-bottom: 20px;
+
+  line-height: 1;
+}
+
+.hero-tagline {
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  color: #cbd5e1;
+
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 20px;
+}
+
+.book-btn,
+.trailer-btn {
+  border: none;
+
+  padding: 16px 32px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.book-btn {
+  background: #e11d48;
+
+  color: white;
+}
+
+.trailer-btn {
+  background: rgba(255,255,255,0.12);
+
+  color: white;
+
+  backdrop-filter: blur(12px);
+}
+
+.book-btn:hover,
+.trailer-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* TRENDING */
+
+.dashboard-section {
+  padding: 60px;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 30px;
+}
+
+.dashboard-posters {
+  display: flex;
+
+  gap: 25px;
+
+  overflow-x: auto;
+}
+
+.dashboard-poster {
+  min-width: 230px;
+
+  background: #1e293b;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.dashboard-poster:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.dashboard-poster img {
+  width: 100%;
+
+  height: 340px;
+
+  object-fit: cover;
+}
+
+.poster-info {
+  padding: 15px;
+}
+
+/* STATS */
+
+.stats-section {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  padding: 60px;
+}
+
+.stat-card {
+  flex: 1;
+
+  max-width: 280px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.stat-card h2 {
+  color: #e11d48;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+
+  padding: 40px;
+
+  background: #020617;
+
+  margin-top: 60px;
+}
+
+.footer h2 {
+  color: #e11d48;
+
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #94a3b8;
+
+  margin: 8px 0;
+}

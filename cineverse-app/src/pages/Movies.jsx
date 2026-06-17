@@ -3,39 +3,54 @@ import { useNavigate } from "react-router-dom";
 export default function Movies() {
   const navigate = useNavigate();
 
+  const movies = [
+    {
+      id: 1,
+      title: "Interstellar",
+      image:
+        "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    },
+    {
+      id: 2,
+      title: "Inception",
+      image:
+        "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+    },
+    {
+      id: 3,
+      title: "Oppenheimer",
+      image:
+        "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg",
+    },
+    {
+      id: 4,
+      title: "Avatar",
+      image:
+        "https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg",
+    },
+  ];
+
   return (
-    <div>
-      <h1>🎥 Movie Catalog</h1>
+    <div className="movies-page">
+      <h1>🎬 Now Showing</h1>
 
-      <div>
-        <h3>Avengers: Endgame</h3>
-        <p>Action | Sci-Fi</p>
+      <div className="movies-grid">
+        {movies.map((movie) => (
+          <div key={movie.id} className="movie-card">
+            <img
+              src={movie.image}
+              alt={movie.title}
+            />
 
-        <button onClick={() => navigate("/booking")}>
-          Book Ticket
-        </button>
-      </div>
+            <h3>{movie.title}</h3>
 
-      <hr />
-
-      <div>
-        <h3>Interstellar</h3>
-        <p>Sci-Fi | Adventure</p>
-
-        <button onClick={() => navigate("/booking")}>
-          Book Ticket
-        </button>
-      </div>
-
-      <hr />
-
-      <div>
-        <h3>Inception</h3>
-        <p>Action | Thriller</p>
-
-        <button onClick={() => navigate("/booking")}>
-          Book Ticket
-        </button>
+            <button
+              onClick={() => navigate("/seats")}
+            >
+              Book Now
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
